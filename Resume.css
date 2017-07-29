@@ -1,0 +1,75 @@
+@import 'https://fonts.googleapis.com/css?family=Abel|Slabo+27px';
+/*      _                 _   _     _                         _           
+ __   _(_)___ _   _  __ _| | | |__ (_) ___ _ __ __ _ _ __ ___| |__  _   _ 
+ \ \ / / / __| | | |/ _` | | | '_ \| |/ _ \ '__/ _` | '__/ __| '_ \| | | |
+  \ V /| \__ \ |_| | (_| | | | | | | |  __/ | | (_| | | | (__| | | | |_| |
+   \_/ |_|___/\__,_|\__,_|_| |_| |_|_|\___|_|  \__,_|_|  \___|_| |_|\__, |
+                                                                    |___/  */
+title::first-line { font-size:2.6rem }
+
+title, h1, h2,
+[id]:before,
+script:first-line,
+aside:first-line,
+footer:first-line,
+footer a:first-line { font:1.27rem 'Slabo 27px' }
+
+* { font:1rem/1.27rem Abel }
+
+[id]:after { font:.8rem/2.6rem Abel }
+
+/* ____            _             _   
+  / ___|___  _ __ | |_ ___ _ __ | |_ 
+ | |   / _ \| '_ \| __/ _ \ '_ \| __|
+ | |__| (_) | | | | ||  __/ | | | |_ 
+  \____\___/|_| |_|\__\___|_| |_|\__|
+                                      
+* /*{background:rgba(255,0,0,.2);outline:1px solid}/**/
+* { -webkit-font-smoothing: antialiased; text-decoration:none;
+  box-sizing:border-box; margin:auto; padding:0 }
+
+title:first-line,
+:link, :visited,
+a:hover, a:active { color:hsl(216,79%,45%) }
+
+@media screen {
+  html { background: fixed no-repeat center/cover hsl(39,21%,21%) 
+    url(https://lh6.googleusercontent.com/-SDxymme0VHI/AAAAAAAAAAI/AAAAAAAAZDo/sMmRjgO8iwU/photo.jpg) }
+
+  title:after { float:right; content:''; height:60px; width:60px;
+    border-radius:60px; border:1px solid hsla(39,21%,21%,.4);
+    background: center/cover
+    url(https://lh6.googleusercontent.com/-SDxymme0VHI/AAAAAAAAAAI/AAAAAAAAZDo/sMmRjgO8iwU/photo.jpg) } 
+}
+
+head, title, script:not([src]), [name=description] { display:block }
+[name=description]:before { content:attr(value) }
+title, p, li, aside, footer, script { white-space:pre-line }
+
+@page { margin:0 }
+html { padding:1rem }
+html, body { max-width:55rem }
+
+head > *, body > * { padding:1rem; margin-bottom:.6rem }
+
+@media print, (min-width:800px) {
+  script { float:left; width:61% }
+  figure, aside, footer { float:right; width:38% }}
+@media print { 
+  script { padding-top:1.6rem }
+  head { float:right; witdh:38% }}
+
+@media screen {
+  head > *, body > * { background:rgba(255,255,255,.8);
+    box-shadow:0 .6rem 1rem hsla(39,21%,21%,.3) }}
+
+
+#Skills label { padding-right:.6em }
+#Skills:before { content:attr(id); display:block }
+#Skills:after { content:'(\0025A0 x1000 hours)'; float:right }
+
+
+footer nav { display:flex }
+[href*=linkedin]:before { content:''; width:2rem; height:2rem; display:block;
+  background:center/cover url(https://static.licdn.com/sc/h/eahiplrwoq61f4uan012ia17i); }
+@media print { [onclick] { display:none }}
