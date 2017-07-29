@@ -1,0 +1,67 @@
+==================================================================
+https://keybase.io/brito
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://brito.mx
+  * I am brito (https://keybase.io/brito) on keybase.
+  * I have a public key with fingerprint 2DEB AB0D DF8E 87B9 D338  A261 CC2D 4EB5 B9B4 1B1B
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "2debab0ddf8e87b9d338a261cc2d4eb5b9b41b1b",
+            "host": "keybase.io",
+            "key_id": "cc2d4eb5b9b41b1b",
+            "kid": "0101636f74f39600b581e52fa83689fe15c396f85315e28c8a5736a0f8d0840da29f0a",
+            "uid": "04e60ff82d01c521c578eec39c415b19",
+            "username": "brito"
+        },
+        "service": {
+            "hostname": "brito.mx",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1441055384,
+    "expire_in": 157680000,
+    "prev": "282a2d6601a4c087b7bdc6ad758e5210f79eb899c720e57deed60556ee6d094a",
+    "seqno": 6,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.43
+Comment: https://keybase.io/crypto
+
+yMIXAnicbVJbSFRBGF7TkrU1g+yhiLQTWJRtM+c6ZykQlijqoYeSMpXtzJk57knb
+s55db9WSEFFUFCxdxIdsyRArs4hQCMKki9HNIEqs7SrdI2HJCpWaYwU9NDAM8/3f
+9838H/+17HRXVtriklnfTo1WkbTbV9UaV/FQb9N2DlukgfNt5yrpxGGYoQpqh20z
+FOV8HE8o1jAgxEAUKVglgoA0Xoa6zhORYgmrWIQYYq6QC1oRR8FssBahXtNiGLsE
+TMLQ//ArJwoAAigLsqGIhqDKAGAJQSrxhoYEGakGhZLOcANJApQoj3SkSYoga8BA
+BCAREI1XDaAxu5rfdiKVgWEgngCoSzzbCqKUWegilDBUHWKE2iFtK2VsbJtRi4sV
+cgyqNXXq9O+08W/Zu7WeicK2FbV0q4qhwWg07HNE0Yaww6qjOPBHH8BmiLD8mKCW
+2hHTCnE+yJh61HQMoShCIEkCEgs5Wh82bRowHYakyAiw5TxDa53UEa/xRJYB1EQd
+sNwVTHRZI4qEWDYQGIpKMVJVXeEBlRRCKZGZsUypTIAqOnFEaHXI4nwy+6ZWwSwj
+ZkVIi9bYlIv19pRluNKyXFMmT3ImwJXlnv53LspXZv4sPbHCfetbf2tj4+xnS58U
+H/x8vA7mXxqNW9ll7txwTPQpBcKm3EfDuwZvzAx+OrbqQEfyyNzuD/ceVm9M9D3P
+W/Pj+YXX/SOHU0OLVp2ra2/J2TIW+7K5vTrZN71zSduOdXvf7z/k6ZDHBxN278bu
+M7GFBflXd65P6V/vLD/b8uFmnvcoSo6ZpcVT3z5Iz/EUzXh3en7J97ja/7hjKHHZ
+/cNzozzj4iv/vMkrhod7soMVnf7PI11FY827U+6W8w2tC8rGpVnXM1IeuO9oHPqn
++Ta8tPxNhXcPpItXTnfNyXzR1bz65NqWgqfJbW/2LbswkNDfeD/uid+fGmwb6How
+uhNKj34B4SgvTQ==
+=lLWF
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/brito
+
+==================================================================
