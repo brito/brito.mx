@@ -14,5 +14,10 @@ Experience =
 			// highlights
 			.replace(/•.+\n/g, m => console.warn(m)||'')
 			// skills
-			.replace(/\[[^\]]+\]/, m => console.warn(m)||'')
+			.replace(/\[\s([^\]]+)\s\]/, skills)
 	)
+
+function skills(all, list){
+	
+	return console.warn(list.split` `)
+}
