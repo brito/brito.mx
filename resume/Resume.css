@@ -72,4 +72,4 @@ head > *, body > * { padding:1rem; margin-bottom:.6rem }
 footer nav { display:flex }
 [href*=linkedin]:before { content:''; width:2rem; height:2rem; display:block;
   background:center/cover url(https://static.licdn.com/sc/h/eahiplrwoq61f4uan012ia17i); }
-@media print { [onclick] { display:none }}
+@media print { [href*="blob/gh-pages"] { display:none }}
