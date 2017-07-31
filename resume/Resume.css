@@ -41,6 +41,9 @@ a:hover, a:active { color:hsl(216,79%,45%) }
     border-radius:60px; border:1px solid hsla(39,21%,21%,.4);
     background: center/cover
     url(https://bit.ly/brito-jpg) } 
+
+  head > *, body > * { background:rgba(255,255,255,.9);
+    box-shadow:0 .6rem 1rem hsla(39,21%,21%,.3) }
 }
 
 head, title, script:not([src]), [name=description] { display:block }
@@ -59,10 +62,6 @@ head > *, body > * { padding:1rem; margin-bottom:.6rem }
 @media print { 
   script { padding-top:1.6rem }
   head { float:right; witdh:38% }}
-
-@media screen {
-  head > *, body > * { background:rgba(255,255,255,.8);
-    box-shadow:0 .6rem 1rem hsla(39,21%,21%,.3) }}
 
 figure { overflow-x:auto }
 
