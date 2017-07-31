@@ -64,6 +64,8 @@ head > *, body > * { padding:1rem; margin-bottom:.6rem }
   head > *, body > * { background:rgba(255,255,255,.8);
     box-shadow:0 .6rem 1rem hsla(39,21%,21%,.3) }}
 
+figure { overflow-x:auto }
+
 footer nav { display:flex; flex-flow:wrap }
 footer nav a { line-height:2rem; text-align:center; margin:1em auto }
 footer nav a:before { content:''; width:1.6em; height:1.6em; display:inline-block }
