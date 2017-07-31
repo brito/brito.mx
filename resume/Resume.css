@@ -29,6 +29,10 @@ footer a:first-line { font:1.27rem 'Slabo 27px' }
 * { -webkit-font-smoothing: antialiased; text-decoration:none;
   box-sizing:border-box; margin:auto; padding:0 }
 
+head, title, script:not([src]), [name=description] { display:block }
+[name=description]:before { content:attr(value) }
+title, p, li, aside, footer, script { white-space:pre-line }
+
 title:first-line,
 :link, :visited,
 a:hover, a:active { color:hsl(216,79%,45%) }
@@ -42,13 +46,9 @@ a:hover, a:active { color:hsl(216,79%,45%) }
     background: center/cover
     url(https://bit.ly/brito-jpg) } 
 
-  head > *, body > * { background:rgba(255,255,255,.9);
+  title, meta, body > * { background:rgba(255,255,255,.9);
     box-shadow:0 .6rem 1rem hsla(39,21%,21%,.3) }
 }
-
-head, title, script:not([src]), [name=description] { display:block }
-[name=description]:before { content:attr(value) }
-title, p, li, aside, footer, script { white-space:pre-line }
 
 @page { margin:0 }
 html { padding:1rem }
@@ -78,3 +78,6 @@ footer nav a:before { content:''; width:1.6em; height:1.6em; display:inline-bloc
 
 @media print { [href*=gh-pages] { display:none }
   footer:after { content:'https://brito.mx/resume'; display:block; text-align:center }}
+
+/* you cannot quite escape the IE quirks once in awhile */
+link { display:none }
