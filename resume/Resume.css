@@ -8,11 +8,12 @@
 title::first-line { font-size:2.6rem }
 
 title, h1, h2,
-[id]:before,
+[class]:before,
 script:first-line,
 aside:first-line,
 footer:first-line,
 footer a:first-line { font:1.27rem 'Slabo 27px' }
+[class]:before { content:attr(class); display:block }
 
 * { font:1rem/1.27rem Abel }
 
@@ -62,11 +63,6 @@ head > *, body > * { padding:1rem; margin-bottom:.6rem }
 @media screen {
   head > *, body > * { background:rgba(255,255,255,.8);
     box-shadow:0 .6rem 1rem hsla(39,21%,21%,.3) }}
-
-
-#Skills label { padding-right:.6em }
-#Skills:before { content:attr(id); display:block }
-#Skills:after { content:'(\0025A0 x1000 hours)'; float:right }
 
 
 footer nav { display:flex }

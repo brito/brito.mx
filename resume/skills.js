@@ -68,7 +68,7 @@ Object.entries(accumulator)
         data.style.cssText = `color:hsl(${color},62%,50%); white-space:nowrap; margin-left:1ex`;
         label.appendChild(data);
 
-        document.querySelector`#Skills`.appendChild(label);
+        document.querySelector`.Skills`.appendChild(label);
     });
 
 // II. 
