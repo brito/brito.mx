@@ -35,12 +35,12 @@ a:hover, a:active { color:hsl(216,79%,45%) }
 
 @media screen {
   html { background: fixed no-repeat center/cover hsl(39,21%,21%) 
-    url(https://lh6.googleusercontent.com/-SDxymme0VHI/AAAAAAAAAAI/AAAAAAAAZDo/sMmRjgO8iwU/photo.jpg) }
+    url(https://bit.ly/brito-jpg) }
 
   title:after { float:right; content:''; height:60px; width:60px;
     border-radius:60px; border:1px solid hsla(39,21%,21%,.4);
     background: center/cover
-    url(https://lh6.googleusercontent.com/-SDxymme0VHI/AAAAAAAAAAI/AAAAAAAAZDo/sMmRjgO8iwU/photo.jpg) } 
+    url(https://bit.ly/brito-jpg) } 
 }
 
 head, title, script:not([src]), [name=description] { display:block }
