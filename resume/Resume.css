@@ -77,7 +77,8 @@ footer nav a:before { content:''; width:1.6em; height:1.6em; display:inline-bloc
   content:'</>' }
 
 @media print { [href*=gh-pages] { display:none }
-  footer:after { content:'https://brito.mx/resume'; display:block; text-align:center }}
+  footer:after { content:'https://brito.mx/resume'; display:block; text-align:center }
+  head, body { transform:scale(.77) }}
 
 /* you cannot quite escape the IE quirks once in awhile */
 link { display:none }
