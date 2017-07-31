@@ -64,8 +64,16 @@ head > *, body > * { padding:1rem; margin-bottom:.6rem }
   head > *, body > * { background:rgba(255,255,255,.8);
     box-shadow:0 .6rem 1rem hsla(39,21%,21%,.3) }}
 
+footer nav { display:flex; flex-flow:wrap }
+footer nav a { line-height:2rem; text-align:center; margin:1em auto }
+footer nav a:before { content:''; width:1.6em; height:1.6em; display:inline-block }
 
-footer nav { display:flex }
-[href*=linkedin]:before { content:''; width:2rem; height:2rem; display:block;
-  background:center/cover url(https://static.licdn.com/sc/h/eahiplrwoq61f4uan012ia17i); }
-@media print { [href*="blob/gh-pages"] { display:none }}
+[href*=linkedin]:before { 
+  background:0/cover url(https://static.licdn.com/sc/h/eahiplrwoq61f4uan012ia17i) }
+[href*=nullisnull]:before { 
+  background:0/cover url(https://cdn-images-1.medium.com/fit/c/72/72/1*tWJW1LEopkc46M2XfmQ9EQ.png)}
+[href*=gh-pages]:before { 
+  content:'</>' }
+
+@media print { [href*=gh-pages] { display:none }
+  footer:after { content:'https://brito.mx/resume'; display:block; text-align:center }}
