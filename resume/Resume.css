@@ -11,8 +11,7 @@ title, h1, h2,
 [class]:before,
 script:first-line,
 aside:first-line,
-footer:first-line,
-footer a:first-line { font:1.27rem 'Slabo 27px' }
+nav a:first-line { font:1.27rem 'Slabo 27px' }
 [class]:before { content:attr(class); display:block }
 
 * { font:1rem/1.27rem Abel }
@@ -31,7 +30,7 @@ footer a:first-line { font:1.27rem 'Slabo 27px' }
 
 head, title, script:not([src]), [name=description] { display:block }
 [name=description]:before { content:attr(value) }
-title, p, li, aside, footer, script { white-space:pre-line }
+title, p, li, aside, script { white-space:pre-line }
 
 title:first-line,
 :link, :visited,
@@ -51,34 +50,36 @@ a:hover, a:active { color:hsl(216,79%,45%) }
 }
 
 @page { margin:0 }
-html { padding:1rem }
-html, body { max-width:55rem }
+html { padding:1rem; max-width:55rem }
 
 head > *, body > * { padding:1rem; margin-bottom:.6rem }
 
 @media print, (min-width:800px) {
   script { float:left; width:61% }
-  figure, aside, footer { float:right; width:38% }}
-@media print { 
-  script { padding-top:1.6rem }
-  head { float:right; witdh:38% }}
+  figure, aside { float:right; width:38% }
+}
 
 figure { overflow-x:auto }
 
-footer nav { display:flex; flex-flow:wrap }
-footer nav a { line-height:2rem; text-align:center; margin:1em auto }
-footer nav a:before { content:''; width:1.6em; height:1.6em; display:inline-block }
+nav { display:flex; flex-flow:wrap; width:100% }
+nav a, nav:after { line-height:1rem; text-align:center }
 
-[href*=linkedin]:before { 
-  background:0/cover url(https://static.licdn.com/sc/h/eahiplrwoq61f4uan012ia17i) }
-[href*=nullisnull]:before { 
-  background:0/cover url(https://cdn-images-1.medium.com/fit/c/72/72/1*tWJW1LEopkc46M2XfmQ9EQ.png)}
-[href*=gh-pages]:before { 
-  content:'</>' }
-
-@media print { [href*=gh-pages] { display:none }
-  footer:after { content:'https://brito.mx/resume'; display:block; text-align:center }
-  head, body { transform:scale(.77) }}
+@media screen {
+  nav a:before { content:''; width:1.6em; height:1.6em; display:inline-block }
+  [href*=linkedin]:before { 
+    background:0/cover url(https://static.licdn.com/sc/h/eahiplrwoq61f4uan012ia17i) }
+  [href*=nullisnull]:before { 
+    background:0/cover url(https://cdn-images-1.medium.com/fit/c/72/72/1*tWJW1LEopkc46M2XfmQ9EQ.png)}
+  [href*=gh-pages]:before { content:'</>' }
+  [href="https://brito.mx/resume"] { display:none }
+}
+  
+@media print {
+  [href*=gh-pages] { display:none }
+  html { transform:scale(.77); transform-origin:top }
+  script { padding-top:1.6rem }
+  head { float:right; width:38% }
+}
 
 /* you cannot quite escape the IE quirks once in awhile */
 link { display:none }
