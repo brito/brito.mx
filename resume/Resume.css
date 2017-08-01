@@ -52,7 +52,8 @@ a:hover, a:active { color:hsl(216,79%,45%) }
 @page { margin:0 }
 html { padding:1rem; max-width:55rem }
 
-head > *, body > * { padding:1rem; margin-bottom:.6rem }
+head > *, body > * { padding:.6rem 1rem; margin-bottom:.6rem }
+script:not([src]) { padding-bottom:0 }
 
 @media print, (min-width:800px) {
   script { float:left; width:61% }
