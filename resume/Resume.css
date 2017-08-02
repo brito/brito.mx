@@ -56,8 +56,8 @@ head > *, body > * { padding:.6rem 1rem; margin-bottom:.6rem }
 script:not([src]) { padding-bottom:0 }
 
 @media print, (min-width:800px) {
-  script { float:left; width:61% }
-  figure, aside { float:right; width:38% }
+  script { float:right; width:61% }
+  figure, aside { float:left; width:38% }
 }
 
 figure { overflow-x:auto }
@@ -79,7 +79,7 @@ nav a, nav:after { line-height:1rem; text-align:center }
   [href*=gh-pages] { display:none }
   html { transform:scale(.77); transform-origin:top }
   script { padding-top:1.6rem }
-  head { float:right; width:38% }
+  head { float:left; width:38% }
 }
 
 /* you cannot quite escape the IE quirks once in awhile */
