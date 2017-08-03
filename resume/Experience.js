@@ -1,4 +1,4 @@
-
+// WIP intended to replace skills.js when finished 
 Experience =
 	([text]) => text
 		.split(/\n{2,}/)

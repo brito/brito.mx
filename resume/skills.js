@@ -1,3 +1,6 @@
+/* WIP migrating this to Experience.js, 
+to reuse the text inside the script tag 
+and data does not have to be re-declared */
 let accumulator = {},
     Experience = [
         {
