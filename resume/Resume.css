@@ -16,6 +16,8 @@ nav a:first-line { font:1.4rem/1.3 Rubik }
 
 * { font:.95rem/1.4rem Rubik }
 
+figure label { font-size:.78rem }
+
 /* ____            _             _   
   / ___|___  _ __ | |_ ___ _ __ | |_ 
  | |   / _ \| '_ \| __/ _ \ '_ \| __|
@@ -46,7 +48,11 @@ script:not([src]) { padding-bottom:0 }
   figure, aside { float:left; width:38% }
 }
 
-figure { overflow-x:auto }
+
+figure { display:flex; flex-flow:wrap; justify-content:center }
+figure label,
+figcaption { flex:1 0 50% }
+figcaption { text-align:right }
 
 nav { display:flex; flex-flow:wrap; width:100% }
 nav a, nav:after { line-height:1rem; text-align:center }
@@ -58,7 +64,7 @@ nav a, nav:after { line-height:1rem; text-align:center }
   [href*=nullisnull]:before { 
     background:0/cover url(https://cdn-images-1.medium.com/fit/c/72/72/1*tWJW1LEopkc46M2XfmQ9EQ.png)}
   [href*=gh-pages]:before { content:'</>'; margin-right:1ex }
-  [href="https://brito.mx/resume"] { display:none }
+  [href*="brito.mx/resume"] { display:none }
 }
   
 @media print {
