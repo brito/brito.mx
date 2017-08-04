@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Abel|Slabo+27px';
+@import 'https://fonts.googleapis.com/css?family=Rubik:300|Slabo+27px';
 /*      _                 _   _     _                         _           
  __   _(_)___ _   _  __ _| | | |__ (_) ___ _ __ __ _ _ __ ___| |__  _   _ 
  \ \ / / / __| | | |/ _` | | | '_ \| |/ _ \ '__/ _` | '__/ __| '_ \| | | |
@@ -11,12 +11,10 @@ title, h1, h2,
 [class]:before,
 script:first-line,
 aside:first-line,
-nav a:first-line { font:1.27rem 'Slabo 27px' }
+nav a:first-line { font:1.4rem/1.3 Rubik }
 [class]:before { content:attr(class); display:block }
 
-* { font:1rem/1.27rem Abel }
-
-[id]:after { font:.8rem/2.6rem Abel }
+* { font:.95rem/1.4rem Rubik }
 
 /* ____            _             _   
   / ___|___  _ __ | |_ ___ _ __ | |_ 
@@ -36,19 +34,6 @@ title:first-line,
 :link, :visited,
 a:hover, a:active { color:hsl(216,79%,45%) }
 
-@media screen {
-  html { background: fixed no-repeat center/cover hsl(39,21%,21%) 
-    url(https://bit.ly/brito-jpg) }
-
-  title:after { float:right; content:''; height:60px; width:60px;
-    border-radius:60px; border:1px solid hsla(39,21%,21%,.4);
-    background: center/cover
-    url(https://bit.ly/brito-jpg) } 
-
-  title, meta, body > * { background:rgba(255,255,255,.9);
-    box-shadow:0 .6rem 1rem hsla(39,21%,21%,.3) }
-}
-
 @page { margin:0 }
 html { padding:1rem; max-width:55rem }
 
@@ -56,7 +41,8 @@ head > *, body > * { padding:.6rem 1rem; margin-bottom:.6rem }
 script:not([src]) { padding-bottom:0 }
 
 @media print, (min-width:800px) {
-  script { float:right; width:61% }
+  head { float:left; width:38% }
+  script { float:right; width:61%; padding-top:1.9rem }
   figure, aside { float:left; width:38% }
 }
 
@@ -71,15 +57,13 @@ nav a, nav:after { line-height:1rem; text-align:center }
     background:0/cover url(https://static.licdn.com/sc/h/eahiplrwoq61f4uan012ia17i) }
   [href*=nullisnull]:before { 
     background:0/cover url(https://cdn-images-1.medium.com/fit/c/72/72/1*tWJW1LEopkc46M2XfmQ9EQ.png)}
-  [href*=gh-pages]:before { content:'</>' }
+  [href*=gh-pages]:before { content:'</>'; margin-right:1ex }
   [href="https://brito.mx/resume"] { display:none }
 }
   
 @media print {
   [href*=gh-pages] { display:none }
   html { transform:scale(.77); transform-origin:top }
-  script { padding-top:1.6rem }
-  head { float:left; width:38% }
 }
 
 /* you cannot quite escape the IE quirks once in awhile */
