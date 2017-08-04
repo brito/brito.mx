@@ -67,7 +67,7 @@ Object.entries(accumulator)
             data = document.createElement`data`;
 
         label.innerHTML = ` ${skill[0]}`;
-        data.innerHTML = `${Array(Math.ceil(weight)).join('|')} ${weight > 5 ? Math.floor(weight) : ''}`;
+        data.innerHTML = `${Array(Math.ceil(weight)).join('|')}`;
         data.style.cssText = `color:hsl(${color},62%,50%); white-space:nowrap; margin-left:1ex`;
         label.appendChild(data);
 
