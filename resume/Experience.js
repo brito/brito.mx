@@ -44,4 +44,10 @@ Experience =
 		)
 		// join
 		.reduce((all, one)=> all.concat(one), [])
-		.forEach(item => console.log(item));
+		.join('\n').
+		replace(/^[\w\W]+$/, m => {
+			let section = document.createElement`section`;
+				section.className = 'Experience';
+			section.innerHTML = m; 
+			document.body.replaceChild(section, document.querySelector`script:not([src])`)
+		});

@@ -10,13 +10,17 @@ title::first-line { font-size:2.6rem }
 title, h1, h2,
 [class]:before,
 script:first-line,
+section:first-line,
 aside:first-line,
 nav a:first-line { font:1.4rem/1.3 Rubik }
 [class]:before { content:attr(class); display:block }
 
 * { font:.95rem/1.4rem Rubik }
+article:first-line { font-weight:bold }
+[title]:before { content:attr(title); display:block }
+[name=description]:before { content:attr(value) }
 
-figure label { font-size:.78rem }
+label, time { font-size:.78rem; opacity:.7 }
 
 /* ____            _             _   
   / ___|___  _ __ | |_ ___ _ __ | |_ 
@@ -28,8 +32,7 @@ figure label { font-size:.78rem }
 * { -webkit-font-smoothing: antialiased; text-decoration:none;
   box-sizing:border-box; margin:auto; padding:0 }
 
-head, title, script:not([src]), [name=description] { display:block }
-[name=description]:before { content:attr(value) }
+head, title, script:not([src]), [name=description], time { display:block }
 title, p, li, aside, script { white-space:pre-line }
 
 title:first-line,
@@ -44,7 +47,7 @@ script:not([src]) { padding-bottom:0 }
 
 @media print, (min-width:800px) {
   head { float:left; width:38% }
-  script { float:right; width:61%; padding-top:1.9rem }
+  script, section { float:right; width:61%; padding-top:1.9rem }
   figure, aside { float:left; width:38% }
 }
 
