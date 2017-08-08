@@ -16,6 +16,7 @@ nav a:first-line { font:1.4rem/1.3 Rubik }
 [class]:before { content:attr(class); display:block }
 
 * { font:.95rem/1.4rem Rubik }
+article { margin:1rem 0 2rem }
 article:first-line { font-weight:bold }
 [title]:before { content:attr(title); display:block }
 [name=description]:before { content:attr(value) }
@@ -33,7 +34,8 @@ label, time { font-size:.78rem; opacity:.7 }
   box-sizing:border-box; margin:auto; padding:0 }
 
 head, title, script:not([src]), [name=description], time { display:block }
-title, p, li, aside, script { white-space:pre-line }
+title, aside, script { white-space:pre-line }
+li { margin-left:1.4em }
 
 title:first-line,
 :link, :visited,
