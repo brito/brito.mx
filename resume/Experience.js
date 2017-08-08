@@ -1,4 +1,35 @@
-// WIP intended to replace skills.js when finished 
+/** /// WIP intended to replace skills.js when finished
+Experience =
+	([text]) => [
+    [/^(.+)(?= \| )/, 
+        (text,title) => S({ [title]: 'article[title]' })],
+    [/ \| (.+)\n/, 
+        (text, href) => S({ [href]: 'a[href]' })],
+    [/([-\d]+) \D ([-\d]+)\n/u, 
+        (text, from, to) => S({ [`${from} — ${to}`]: 'time[datetime]' })],
+    [/•(.+)\n/g, 
+        (text, li) => S({ [li]: 'li'})],
+    [/\[\s([^\]]+)\s\]/, 
+        (text, label) => S({ [label]: 'label[data]' })]
+]
+
+.reduce((items, [re, fn]) => items
+    .map(item => item.trim().replace(re, fn))
+, text.split(/\n{2,}/))
+
+.reduce((a,b)=> console.log(b));
+
+
+
+
+
+
+
+function Q(s){ console.debug(`Q(${s})`);
+    return document.querySelectorAll(s) }
+function S(j){ console.debug(j);
+    return JSON.stringify(j) }
+/**/
 Experience =
 	([text]) => text
 		.split(/\n{2,}/)
@@ -18,7 +49,6 @@ Experience =
 				.replace(/ \| (.+)/, 
 					(text,url) => console.log(url) 
 						|| `\n${url.link(url)}` )
-
 				// duration
 				.replace(/([-\d]+) \D ([-\d]+)/u, 
 					(text,from,to) => console.log(`${from} to ${to}`) 
