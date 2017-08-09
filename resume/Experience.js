@@ -1,35 +1,76 @@
-/** /// WIP intended to replace skills.js when finished
+/**/// WIP intended to replace skills.js when finished
 Experience =
-	([text]) => [
-    [/^(.+)(?= \| )/, 
-        (text,title) => S({ [title]: 'article[title]' })],
-    [/ \| (.+)\n/, 
-        (text, href) => S({ [href]: 'a[href]' })],
-    [/([-\d]+) \D ([-\d]+)\n/u, 
-        (text, from, to) => S({ [`${from} — ${to}`]: 'time[datetime]' })],
-    [/•(.+)\n/g, 
-        (text, li) => S({ [li]: 'li'})],
-    [/\[\s([^\]]+)\s\]/, 
-        (text, label) => S({ [label]: 'label[data]' })]
-]
+	([text]) => text
+		.split(/\n{2,}/)
+		.reduce((list, text) => {
+		    // transform text into item of list
+			let item = {},
+			    // text is matched and substituted
+				substitutions = 
+				[
+				    // location / title
+				    [/(.+) \/ (.+?)\n/,
+				        (text, href, title)=>({
+				            'article[title]': title,
+				            'a[href]': href
+				        })],
 
-.reduce((items, [re, fn]) => items
-    .map(item => item.trim().replace(re, fn))
-, text.split(/\n{2,}/))
+				    // duration
+			        [/([-\d]+) \D ([-\d]+)\n/u, 
+			            (text, from, to) => ({ 'time[datetime]': `${from} — ${to}` })],
 
-.reduce((a,b)=> console.log(b));
+			        // remarks
+			        [/•\s+(.+)\n/g, 
+			            (text, li) => ({ 'li': li })],
 
+			        // skills
+			        [/\[\s([^\]]+)\s\]/, 
+			            (text, label) => ({ 'label[data]': label })]
+			    ]
 
+			    // consume text substitutions
+			    .reduce((text, [re, fn]) => 
+			         text.replace(re, (...values) => {
+			    		let result = fn(...values);
+			    		Object
+			    		   .entries(result)
+			    		   .forEach(([selector, value]) => {
+                                   item[selector] = item[selector] ?
+                                    [].concat(item[selector], value)
+                                    : value;
+			    		   });
+			    		return result;
+			    	})
+			    , text);
 
+			return list.concat(item);
+		}
+		,[])
+		//
+		.map(item => {
+		    let root;
+		    Object
+		      .entries(item)
+		      .forEach(([selector, value], i) => {
+		          const [, name, attr] = /^(\w+)\[?([^\]]*)\]?/.exec(selector);
+		          let el = document.createElement(name);
+		          if (attr)
+		              el.setAttribute(attr, value);
+		          else if (Array.isArray(value))
+		              ;
+		          else
+		              el.innerHTML = value;
 
+		          if (!i)
+		              root = el;
+		          else
+		              root.appendChild(el);
+		      });
+		    console.info(item)
+		    return root;
+		});
 
-
-
-function Q(s){ console.debug(`Q(${s})`);
-    return document.querySelectorAll(s) }
-function S(j){ console.debug(j);
-    return JSON.stringify(j) }
-/**/
+/** /
 Experience =
 	([text]) => text
 		.split(/\n{2,}/)
@@ -81,3 +122,4 @@ Experience =
 			section.innerHTML = m; 
 			document.body.replaceChild(section, document.querySelector`script:not([src])`)
 		});
+/**/
