@@ -63,7 +63,7 @@ figure { display:flex; flex-flow:wrap }
 figure:before { flex:62% }
 figcaption { flex:38%; text-align:right }
 
-nav { display:flex; flex-flow:wrap; width:100%; margin-top:3rem }
+nav { display:flex; flex-flow:wrap; width:100%; padding-top:3rem }
 nav a, nav:after { line-height:1rem; text-align:center }
 
 @media screen {
