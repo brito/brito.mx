@@ -17,7 +17,7 @@
     .map(([label, weight]) => {
         let data = document.createElement`data`,
             scaled = Math.ceil(weight);
-        data.innerHTML = `${label} ${Array(scaled).join('/')}`;
+        data.innerHTML = `${label.replace('/',', ')} ${Array(1 + scaled).join('/')}`;
         data.setAttribute('value', weight);
         data.setAttribute('title', `${scaled}`);
         return data; 

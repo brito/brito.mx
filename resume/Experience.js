@@ -21,6 +21,8 @@ Experience =
                         time.setAttribute('datetime', `${duration / W} W`);
                         time.innerText = `${from} — ${to}`;
                         el.appendChild(time);
+                        let years = Math.ceil(duration/W/52);
+                        time.parentNode.setAttribute('data', Array(1 + years).join('/'));
                     }],
 
                 // remarks

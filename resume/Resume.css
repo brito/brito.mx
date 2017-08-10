@@ -21,7 +21,7 @@ nav a:first-line,
 [name=description], article { margin:1.5rem 0 }
 
 article:first-line { font-weight:bold }
-article[title]:before { content:attr(title)' // ' }
+article[title]:before { content:attr(title)' 'attr(data)' ' }
 data[title]:after { content:attr(title) }
 [name=description]:before { content:attr(value) }
 
