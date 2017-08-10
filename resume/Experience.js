@@ -1,4 +1,3 @@
-/**/// WIP replacing skills.js
 Experience =
 	([text]) => text
 		.split(/\n{2,}/)
@@ -19,7 +18,7 @@ Experience =
                     		duration  = new Date(to) - new Date(from);
                     	//w3c.github.io/html/infrastructure.html#duration-time-component-scale
                     	const W = 6048e5;
-                        time.datetime = `${duration * W} W`;
+                        time.setAttribute('datetime', `${duration / W} W`);
                         time.innerText = `${from} — ${to}`;
                         el.appendChild(time);
                     }],
@@ -46,7 +45,7 @@ Experience =
                     		// map output
                     		.map(([label, weight]) => {
                     			let data = document.createElement`data`;
-								data.setAttribute('data', weight);
+								data.setAttribute('value', weight);
 								data.innerText = label;
 								el.appendChild(data);
                     		});
@@ -58,7 +57,7 @@ Experience =
             }, article);
 		    return el;
 		})
-
+		// group into section
 		.reduce(([section], article) => {
 		    section.appendChild(article);
 		    return [section];
@@ -66,7 +65,7 @@ Experience =
 			el.className = 'Experience';
 			return el;
 		}))
-
+		// replace node
 		.forEach(section => {
 			let script = document.querySelector`script:not([src])`;
 			script.parentNode.replaceChild(section, script);

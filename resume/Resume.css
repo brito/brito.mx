@@ -13,18 +13,19 @@ title { white-space:pre-line }
 title, h2,
 script:first-line,
 nav a:first-line,
-[class]:before { font-size:1.3rem;
+[class]:before, figcaption { font-size:1.3rem;
   display:block; padding:1rem 0 .5rem  }
 [class]:before { content:attr(class) }
 
 * { font:15px/1.5rem Rubik }
-[name=description], article { margin:1.5rem 0}
+[name=description], article { margin:1.5rem 0 }
 
 article:first-line { font-weight:bold }
-[title]:before { content:attr(title)' // ' }
+article[title]:before { content:attr(title)' // ' }
+data[title]:after { content:attr(title) }
 [name=description]:before { content:attr(value) }
 
-data, time { font-size:.75rem; opacity:.7 }
+data, time, figcaption { font-size:.75rem; opacity:.7 }
 
 /* ____            _             _   
   / ___|___  _ __ | |_ ___ _ __ | |_ 
@@ -32,17 +33,15 @@ data, time { font-size:.75rem; opacity:.7 }
  | |__| (_) | | | | ||  __/ | | | |_ 
   \____\___/|_| |_|\__\___|_| |_|\__|
                                       
-* /*{background:rgba(255,0,0,.2);outline:1px solid}/**/
+* /*,:before,:after{background:rgba(255,0,0,.2);outline:1px solid}/**/
 * { -webkit-font-smoothing: antialiased; text-decoration:none;
   box-sizing:border-box; margin:auto; padding:0 }
 
 head, title, script:not([src]), [name=description], time { display:block }
 /* IE */ link { display:none }
 
-
 data { display:inline-block; margin:0 1ex 0 }
 li { margin-left:1.4em }
-
 
 title:first-line,
 :link, :visited,
@@ -60,15 +59,11 @@ html { padding:1rem; max-width:55rem }
 
 aside { white-space:pre-line }
 
+figure { display:flex; flex-flow:wrap }
+figure:before { flex:62% }
+figcaption { flex:38%; text-align:right }
 
-/*
-figure { display:flex; flex-flow:wrap; justify-content:center }
-figure label,
-figcaption { flex:1 0 50% }
-figcaption { text-align:right }
-*/
-
-nav { display:flex; flex-flow:wrap; width:100% }
+nav { display:flex; flex-flow:wrap; width:100%; margin-top:3rem }
 nav a, nav:after { line-height:1rem; text-align:center }
 
 @media screen {
@@ -85,4 +80,3 @@ nav a, nav:after { line-height:1rem; text-align:center }
   [href*=gh-pages] { display:none }
   html { transform:scale(.77); transform-origin:top }
 }
-
