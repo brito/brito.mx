@@ -57,7 +57,7 @@ html { padding:0 1rem; max-width:55rem }
   head { float:left; width:38% }
   script, section { float:right; width:calc(62% - 3rem) }
   .Skills, aside { float:left; width:38% }}
-@media (max-width:800px) {
+@media only screen and (max-width:800px) {
   .Skills { position:absolute; top:15rem; left:1em; right:auto; width:25rem }
   .Experience { margin-top:16rem }}
 
