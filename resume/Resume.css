@@ -54,14 +54,18 @@ html { padding:1rem; max-width:55rem }
 @media print, (min-width:800px) {
   head { float:left; width:38% }
   script, section { float:right; width:55% }
-  figure, aside { float:left; width:38% }
-}
+  .Skills, aside { float:left; width:38% }}
+@media (max-width:800px){
+  .Skills { position:absolute; top:0; right:1em; width:38% }}
+@media (max-width:555px) {
+  .Skills { top:13rem; left:1em; right:auto; width:25rem }
+  .Experience { position:relative; top:10rem }}
 
 aside { white-space:pre-line }
 
-figure { display:flex; flex-flow:wrap }
-figure:before { flex:62% }
-figcaption { flex:38%; text-align:right }
+.Skills { display:flex; flex-flow:wrap }
+.Skills:before { flex:62% }
+.Skills figcaption { flex:38%; text-align:right }
 
 nav { display:flex; flex-flow:wrap; width:100%; padding-top:3rem }
 nav a, nav:after { line-height:1rem; text-align:center }
