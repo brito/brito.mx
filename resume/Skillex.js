@@ -17,9 +17,11 @@
     .map(([label, weight]) => {
         let data = document.createElement`data`,
             scaled = Math.ceil(weight);
-        data.innerHTML = `${label.replace('/',', ')} ${Array(1 + scaled).join('/')}`;
+        data.innerHTML = `${label.replace('/',', ')} ${Array(1 + scaled).join('&nbsp;')}`;
         data.setAttribute('value', weight);
         data.setAttribute('title', `${scaled}`);
+        Array(scaled).fill('/').forEach((c, i) => setTimeout(() => 
+            data.innerHTML = data.innerHTML.replace('&nbsp;', c) , i * 1e2 ));
         return data; 
     })
 
