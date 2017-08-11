@@ -6,7 +6,7 @@
    \_/ |_|___/\__,_|\__,_|_| |_| |_|_|\___|_|  \__,_|_|  \___|_| |_|\__, |
                                                                     |___/  */
 
-title:first-line { font-size:2.36rem; line-height:calc(1.5rem * 4) }
+title:first-line { font-size:2.36rem; line-height:calc(1.5rem * 5) }
 section { margin-top:calc(1.5rem * 2) }
 title { white-space:pre-line }
 
@@ -14,11 +14,13 @@ title, h2,
 script:first-line,
 nav a:first-line,
 [class]:before, figcaption { font-size:1.3rem;
-  display:block; padding:1rem 0 .5rem  }
+  display:block; padding:1.2rem 0 .3rem  }
 [class]:before { content:attr(class) }
+aside { margin:1rem 0 .5rem}
 
 * { font:15px/1.5rem Rubik }
-[name=description], article { margin:1.5rem 0 }
+article { margin:1.5rem 0 }
+[name=description] { margin:.5rem 0 2.5rem }
 
 article:first-line { font-weight:bold }
 article[title]:before { content:attr(title)' 'attr(data)' ' }
@@ -33,7 +35,7 @@ data, time, figcaption { font-size:.75rem; opacity:.7 }
  | |__| (_) | | | | ||  __/ | | | |_ 
   \____\___/|_| |_|\__\___|_| |_|\__|
                                       
-* /*,:before,:after{background:rgba(255,0,0,.2);outline:1px solid}/**/
+* /*,:before,:after,::first-line{background:rgba(255,0,0,.2);outline:1px solid}/**/
 * { -webkit-font-smoothing: antialiased; text-decoration:none;
   box-sizing:border-box; margin:auto; padding:0 }
 
@@ -41,29 +43,27 @@ head, title, script:not([src]), [name=description], time { display:block }
 /* IE */ link { display:none }
 
 data { display:inline-block; margin:0 1ex 0 }
-li { margin-left:1.4em }
+li { margin-left:1em }
 
 title:first-line,
 :link, :visited,
 a:hover, a:active { color:hsl(216,79%,45%) }
 
 @page { margin:0 }
-html { padding:1rem; max-width:55rem }
+html { padding:0 1rem; max-width:55rem }
 
 
 @media print, (min-width:800px) {
   head { float:left; width:38% }
-  script, section { float:right; width:55% }
+  script, section { float:right; width:calc(62% - 3rem) }
   .Skills, aside { float:left; width:38% }}
-@media (max-width:800px){
-  .Skills { position:absolute; top:0; right:1em; width:38% }}
-@media (max-width:555px) {
-  .Skills { top:13rem; left:1em; right:auto; width:25rem }
-  .Experience { position:relative; top:10rem }}
+@media (max-width:800px) {
+  .Skills { position:absolute; top:15rem; left:1em; right:auto; width:25rem }
+  .Experience { margin-top:16rem }}
 
 aside { white-space:pre-line }
 
-.Skills { display:flex; flex-flow:wrap }
+.Skills { display:flex; flex-flow:wrap; justify-content:space-between }
 .Skills:before { flex:62% }
 .Skills figcaption { flex:38%; text-align:right }
 
